@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Management</h1>
+        <form id="employeeForm">
+            <input type="hidden" id="employeeId">
+            <div class="form-group">
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="text" id="jobTitle" placeholder="Job Title" required>
+                <input type="text" id="department" placeholder="Department" required>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+        <input type="text" id="search" placeholder="Search..." onkeyup="searchEmployees()" class="search-bar">
+        <table id="employeeTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Job Title</th>
+                    <th>Department</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="employeeTableBody"></tbody>
+        </table>
+        <div id="pagination"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
